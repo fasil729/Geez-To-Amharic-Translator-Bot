@@ -1,5 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton
 from aiogram.filters.callback_data import CallbackData
+from aiogram.types.web_app_info import WebAppInfo
 
 
 # Callback data for handling inline keyboard buttons
@@ -8,16 +9,51 @@ class ActionCallback(CallbackData, prefix="action"):
 
 
 # Inline keyboard with command buttons
-commands_keyboard = InlineKeyboardMarkup(
-    inline_keyboard=[
+reply_keyboard = ReplyKeyboardMarkup(
+    keyboard=[
         [ 
-            InlineKeyboardButton(text="All Users", callback_data=ActionCallback(command="all_users").pack()),
-            InlineKeyboardButton(text="Add User", callback_data=ActionCallback(command="add_user").pack()),
+            KeyboardButton(text="Geez To Amharic", callback_data=ActionCallback(command="geez_to_amharic").pack(), web_app=WebAppInfo(url="https://https-github-com-fasil729-geez-to-amharic-translator-bot.vercel.app/")),
+            KeyboardButton(text="English To Amharic", callback_data=ActionCallback(command="english_to_amharic").pack(), web_app=WebAppInfo(url="https://translate.yandex.ru/")),
         ], 
         [
-            InlineKeyboardButton(text="Get User by ID", callback_data=ActionCallback(command="get_user_by_id").pack()),
-            InlineKeyboardButton(text="Update User", callback_data=ActionCallback(command="update_user").pack()),
-            InlineKeyboardButton(text="Delete User", callback_data=ActionCallback(command="delete_user").pack()),
+            KeyboardButton(text="Help", callback_data=ActionCallback(command="help").pack()),
+            KeyboardButton(text="Give Feedback", callback_data=ActionCallback(command="give_feedback").pack()),
         ],
+        [
+            KeyboardButton(text="Inline Buttons", callback_data=ActionCallback(command="inline").pack()),
+        ],
+    ],
+    resize_keyboard=True,
+    one_time_keyboard=True,
+    input_field_placeholder="Type here...",
+    selective=True
+)
+
+
+
+# Inline keyboard with command buttons
+inline_reply = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [ 
+            InlineKeyboardButton(text="Geez To Amharic", callback_data=ActionCallback(command="geez_to_amharic").pack(), web_app=WebAppInfo(url="https://https-github-com-fasil729-geez-to-amharic-translator-bot.vercel.app/")),
+            InlineKeyboardButton(text="English To Amharic", callback_data=ActionCallback(command="english_to_amharic").pack(), web_app=WebAppInfo(url="https://translate.yandex.ru/")),
+        ], 
+        [
+            InlineKeyboardButton(text="Help", callback_data=ActionCallback(command="help").pack()),
+            InlineKeyboardButton(text="Give Feedback", callback_data=ActionCallback(command="give_feedback").pack()),
+        ],
+
+        [
+            InlineKeyboardButton(text="KeyBoard Buttons", callback_data=ActionCallback(command="keyboard").pack()),
+        ],
+    ]
+)
+
+# Inline keyboard with command buttons
+cancel_keyboard = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [ 
+            InlineKeyboardButton(text="Cancel", callback_data=ActionCallback(command="cancel").pack()),
+        ]
     ]
 )
