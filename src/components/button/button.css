@@ -11,7 +11,10 @@
   width: 120px;
   text-align: center;
   margin-left: 10px;
-  box-shadow: 1px -3px 52px -5px rgba(0, 0,0,0.77);
+  
+  background-color: orangered;
+  color: white;
+  font-size: small;
 
 }
 .btn.add{
