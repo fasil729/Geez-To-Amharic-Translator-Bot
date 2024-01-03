@@ -1,14 +1,15 @@
 
 import './App.css';
-import { Button } from './components/button/button';
+
+import { router } from './router/router';
+import { RouterProvider } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-    <Button type="add"/>
-    <Button type="checkout"/>
-    <Button type="remove"/>
-    </div>
+    <div className="App flex justify-center">
+    <RouterProvider router={router} />
+   </div>
   );
 }
 
