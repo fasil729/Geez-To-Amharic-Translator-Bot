@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   padding: 0;
@@ -87,4 +89,14 @@ body {
 .link{
   text-decoration: none;
  color: black;
+}
+.note{
+  text-align: justify;
+  padding: 10px;
+}
+.w-300{
+  width: 300px;
+}
+.h-400{
+  height: 400px;
 }
