@@ -18,16 +18,16 @@ async def process_callback_respond_to_action1(callback_query: types.CallbackQuer
     await callback_query.message.answer(f"you picked {callback_query.data}")
 
 
-@callback_router.callback_query(ActionCallback.filter(F.command=="geez_to_amharic"))
-async def geez_to_amharic_callback(callback_query: types.CallbackQuery):
-    await callback_query.answer()
-    await callback_query.message.answer("You selected Geez to Amharic. Redirecting to the Geez to Amharic web app.")
+# @callback_router.callback_query(ActionCallback.filter(F.command=="geez_to_amharic"))
+# async def geez_to_amharic_callback(callback_query: types.CallbackQuery):
+#     await callback_query.answer()
+#     await callback_query.message.answer("You selected Geez to Amharic. Redirecting to the Geez to Amharic web app.")
     
 
-@callback_router.callback_query(ActionCallback.filter(F.command=="english_to_amharic"))
-async def english_to_amharic_callback(callback_query: types.CallbackQuery):
-    await callback_query.answer()
-    await callback_query.message.answer("You selected English to Amharic. Redirecting to the English to Amharic web app.")
+# @callback_router.callback_query(ActionCallback.filter(F.command=="english_to_amharic"))
+# async def english_to_amharic_callback(callback_query: types.CallbackQuery):
+#     await callback_query.answer()
+#     await callback_query.message.answer("You selected English to Amharic. Redirecting to the English to Amharic web app.")
     
 
 @callback_router.callback_query(ActionCallback.filter(F.command=="help"))
