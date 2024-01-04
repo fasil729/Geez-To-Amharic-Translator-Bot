@@ -19,7 +19,9 @@ const SpeechToText  = () => {
       your browser does't speech to text recognition
     </div>
   }
-  return ( <div className="">
+  return ( <div className=
+  
+  "">
     <button onClick={SpeechRecognition.startListening}>Start</button>
     <button onClick={SpeechRecognition.stopListening}>Stop</button>
     <button onClick={resetTranscript}>Reset</button>

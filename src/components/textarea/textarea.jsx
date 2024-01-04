@@ -1,6 +1,9 @@
+import { CalculateTextareaHeight } from './textAreaHeight';
 import './textarea.css'
-const TextArea = () => {
-  return ( <textarea className="textarea">ሀሎ: ስላም?</textarea> );
+const TextArea = ({value}) => {
+  return ( <textarea 
+    style={{height:CalculateTextareaHeight()}} 
+     defaultValue={value} className="textarea"/>);
 }
  
 export default TextArea;

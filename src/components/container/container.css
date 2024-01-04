@@ -1,5 +1,5 @@
 .container{
-  background-color: ghostwhite;
+  
   border-radius: 10px;
   text-align: center;
   padding: 10px;
@@ -13,4 +13,10 @@
     width: 95%;
     
   }
+}
+.light{
+  background-color: ghostwhite;
+}
+.dark{
+  background-color: rgba(0,0,0,0.4);
 }
