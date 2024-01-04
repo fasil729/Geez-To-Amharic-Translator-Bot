@@ -1,0 +1,17 @@
+
+.relative{
+  position: relative;
+}
+.inputImage{
+  position: absolute;
+  width: 10px;
+  border: none;
+  outline: none;
+  left: 0;
+  background-color: transparent;
+  color: transparent;
+}
+
+.upload-icon {
+  margin-right: 10px;
+}
