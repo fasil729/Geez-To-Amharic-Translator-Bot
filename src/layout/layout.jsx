@@ -3,13 +3,15 @@ import { FaCamera } from "react-icons/fa";
 import { GoHistory } from "react-icons/go";
 import { GrFavorite } from "react-icons/gr";
 import { Link, Outlet,useLocation  } from "react-router-dom";
+import { useTheme } from "../hooks/useTheme";
 
 
 const Layout = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div className="">
+    <div className="" style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff' }}>
       <Outlet/>
        {/* bottom navbar */}
 
